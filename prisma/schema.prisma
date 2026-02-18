@@ -1,0 +1,19 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model Timing {
+  id        Int      @id @default(autoincrement())
+  ramadan   String
+  gregorian String
+  day       String
+  sehri     String
+  iftar     String
+  phase     String
+  dayNumber Int
+}
