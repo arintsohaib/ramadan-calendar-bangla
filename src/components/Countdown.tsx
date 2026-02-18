@@ -15,7 +15,7 @@ export default function Countdown({ targetTime, label }: Props) {
     const timer = setInterval(() => {
       const now = new Date();
       const diff = targetTime.getTime() - now.getTime();
-      
+
       if (diff <= 0) {
         clearInterval(timer);
         window.location.reload();
@@ -35,24 +35,27 @@ export default function Countdown({ targetTime, label }: Props) {
   const pad = (n: number) => String(n).padStart(2, '0');
 
   return (
-    <div className="bg-white/80 backdrop-blur-md p-6 rounded-3xl shadow-xl text-center border border-white/20">
-      <p className="text-gray-600 mb-2 font-medium">{label}</p>
-      <div className="flex justify-center gap-4">
-        <div className="flex flex-col">
-          <span className="text-4xl font-bold text-green-700">{englishToBangla(pad(timeLeft.hours))}</span>
-          <span className="text-xs text-gray-400">ঘণ্টা</span>
-        </div>
-        <span className="text-4xl font-bold text-green-200">:</span>
-        <div className="flex flex-col">
-          <span className="text-4xl font-bold text-green-700">{englishToBangla(pad(timeLeft.minutes))}</span>
-          <span className="text-xs text-gray-400">মিনিট</span>
-        </div>
-        <span className="text-4xl font-bold text-green-200">:</span>
-        <div className="flex flex-col">
-          <span className="text-4xl font-bold text-green-700">{englishToBangla(pad(timeLeft.seconds))}</span>
-          <span className="text-xs text-gray-400">সেকেন্ড</span>
-        </div>
+    <div className="glass-card p-6 rounded-[32px] text-center">
+      {label && <p className="text-emerald-800 font-bold mb-3 font-bengali text-sm">{label}</p>}
+      <div className="flex justify-center items-center gap-4">
+        <TimeUnit value={timeLeft.hours} label="ঘণ্টা" />
+        <span className="text-2xl font-black text-emerald-200/50 mb-6">:</span>
+        <TimeUnit value={timeLeft.minutes} label="মিনিট" />
+        <span className="text-2xl font-black text-emerald-200/50 mb-6">:</span>
+        <TimeUnit value={timeLeft.seconds} label="সেকেন্ড" isLast />
       </div>
+    </div>
+  );
+}
+
+function TimeUnit({ value, label, isLast = false }: { value: number, label: string, isLast?: boolean }) {
+  const pad = (n: number) => String(n).padStart(2, '0');
+  return (
+    <div className="flex flex-col items-center">
+      <div className="bg-emerald-900 text-white w-14 h-14 rounded-2xl flex items-center justify-center text-2xl font-black shadow-lg shadow-emerald-900/20 mb-2">
+        {englishToBangla(pad(value))}
+      </div>
+      <span className="text-[10px] font-bold text-emerald-800/60 uppercase tracking-widest font-bengali">{label}</span>
     </div>
   );
 }

@@ -1,17 +1,24 @@
-@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300;400;500;600;700&family=Inter:wght@400;500;600;700;800&display=swap');
 
 :root {
   --primary-green: #1b4332;
   --secondary-green: #2d6a4f;
   --accent-gold: #d4af37;
   --accent-red: #c94c4c;
-  --bg-cream: #f4f7f5;
+  --bg-cream: #f8fafc;
+  --emerald-light: #ecfdf5;
+  --emerald-dark: #064e3b;
 }
 
 body {
   background-color: var(--bg-cream);
   color: #1a1a1a;
   -webkit-tap-highlight-color: transparent;
+  font-family: 'Inter', 'Hind Siliguri', sans-serif;
+}
+
+.font-bengali {
+  font-family: 'Hind Siliguri', sans-serif;
 }
 
 .app-shell {
@@ -19,43 +26,77 @@ body {
   margin: 0 auto;
   min-height: 100vh;
   background: white;
-  box-shadow: 0 0 40px rgba(0,0,0,0.05);
+  box-shadow: 0 0 50px rgba(0,0,0,0.08);
   position: relative;
   display: flex;
   flex-direction: column;
 }
 
 .green-gradient-bg {
-  background: linear-gradient(180deg, var(--primary-green) 0%, var(--secondary-green) 100%);
+  background: linear-gradient(135deg, #1b4332 0%, #2d664a 50%, #40916c 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+.green-gradient-bg::before {
+  content: '';
+  position: absolute;
+  top: -20%;
+  right: -10%;
+  width: 200px;
+  height: 200px;
+  background: radial-gradient(circle, rgba(212, 175, 55, 0.1) 0%, transparent 70%);
+  border-radius: 50%;
 }
 
 .glass-card {
-  background: rgba(255, 255, 255, 0.9);
-  backdrop-filter: blur(10px);
-  border: 1px solid rgba(255, 255, 255, 0.3);
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.05);
 }
 
 .location-badge {
-  background: rgba(255, 255, 255, 0.15);
-  padding: 4px 12px;
-  border-radius: 20px;
-  font-size: 0.75rem;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 6px 16px;
+  border-radius: 30px;
+  font-size: 0.8rem;
+  font-weight: 500;
   color: white;
   border: 1px solid rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(4px);
 }
 
 .phase-header {
   position: sticky;
-  top: 0;
+  top: 10px;
   z-index: 10;
-  padding: 12px 20px;
+  padding: 14px 24px;
   font-weight: 700;
   color: white;
-  margin: 20px 0 15px 0;
-  border-radius: 12px;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  margin: 24px 0 16px 0;
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+  text-align: center;
 }
 
-.mercy { background: linear-gradient(90deg, #2d6a4f, #40916c); }
-.forgiveness { background: linear-gradient(90deg, #c94c4c, #e57373); }
-.salvation { background: linear-gradient(90deg, #1b4332, #2d6a4f); }
+.mercy { background: linear-gradient(90deg, #1b4332, #2d6a4f); }
+.forgiveness { background: linear-gradient(90deg, #b45309, #d97706); }
+.salvation { background: linear-gradient(90deg, #991b1b, #b91c1c); }
+
+.time-card {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.time-card:active {
+  transform: scale(0.98);
+}
+
+@keyframes pulse-soft {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.7; }
+}
+
+.animate-pulse-soft {
+  animation: pulse-soft 2s infinite ease-in-out;
+}

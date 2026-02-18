@@ -17,3 +17,13 @@ export function englishToBangla(str: string | number): string {
 export function getBDTime() {
     return new Date(new Date().toLocaleString("en-US", { timeZone: "Asia/Dhaka" }));
 }
+
+export function parseDate(gregorian: string, timeStr: string, isPM: boolean = false): Date {
+    const monthMap: { [key: string]: number } = { 'ফেব্রুয়ারি': 1, 'মার্চ': 2 };
+    const parts = gregorian.split(' ');
+    const day = parseInt(banglaToEnglish(parts[0]));
+    const month = monthMap[parts[1]] ?? 1;
+    const [h, m] = banglaToEnglish(timeStr).split(':').map(Number);
+    const hour = isPM && h < 12 ? h + 12 : (!isPM && h === 12 ? 0 : h);
+    return new Date(2026, month, day, hour, m);
+}
