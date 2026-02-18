@@ -64,10 +64,10 @@ export default function AlarmButton({ timing }: Props) {
   return (
     <button
       onClick={setAlarm}
-      className="group relative flex items-center gap-2 bg-emerald-900 text-white px-5 py-2.5 rounded-2xl font-bold text-xs shadow-lg shadow-emerald-900/20 active:scale-95 transition-all"
+      className="group relative flex items-center gap-2 bg-gold-gradient text-emerald-900 border border-primary-gold/30 px-5 py-2.5 rounded-2xl font-black text-[10px] shadow-md shadow-primary-gold/10 active:scale-95 transition-all uppercase tracking-tighter"
     >
-      <span className="font-bengali">অ্যালার্ম দিন</span>
-      <svg xmlns="http://www.w3.org/2000/svg" className="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"><path d="M18 8a6 6 0 0 0-12 0c0 7 3 9 3 9h6s3-2 3-9" /><path d="M13.73 21a2 2 0 0 1-3.46 0" /><path d="M2 8h2" /><path d="M20 8h2" /><path d="M6.34 15.66l-1.42 1.42" /><path d="M19.07 17.07l-1.42-1.42" /></svg>
+      <span className="font-bengali">অ্যালার্ম সেট করুন</span>
+      <svg xmlns="http://www.w3.org/2000/svg" className="w-3.5 h-3.5 opacity-60" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"><path d="M18 8a6 6 0 0 0-12 0c0 7 3 9 3 9h6s3-2 3-9" /><path d="M13.73 21a2 2 0 0 1-3.46 0" /><path d="M2 8h2" /><path d="M20 8h2" /><path d="M6.34 15.66l-1.42 1.42" /><path d="M19.07 17.07l-1.42-1.42" /></svg>
     </button>
   );
 }
