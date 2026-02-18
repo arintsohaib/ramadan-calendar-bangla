@@ -1,64 +1,65 @@
-'use client';
+"use client";
 
-import { useState, useEffect } from 'react';
-import { englishToBangla } from '@/lib/utils';
+import React, { useState, useEffect } from "react";
+import { englishToBangla } from "@/lib/utils";
 
-interface Props {
+interface CountdownProps {
   targetTime: Date;
-  label: string;
+  label?: string;
 }
 
-export default function Countdown({ targetTime, label }: Props) {
-  const [timeLeft, setTimeLeft] = useState({ hours: 0, minutes: 0, seconds: 0 });
+export default function Countdown({ targetTime, label }: CountdownProps) {
+  const [timeLeft, setTimeLeft] = useState<{
+    hours: number;
+    minutes: number;
+    seconds: number;
+  } | null>(null);
 
   useEffect(() => {
-    const timer = setInterval(() => {
-      const now = new Date();
-      const diff = targetTime.getTime() - now.getTime();
-
+    const tick = () => {
+      const diff = targetTime.getTime() - Date.now();
       if (diff <= 0) {
-        clearInterval(timer);
-        window.location.reload();
+        setTimeLeft({ hours: 0, minutes: 0, seconds: 0 });
         return;
       }
-
       setTimeLeft({
-        hours: Math.floor(diff / (1000 * 60 * 60)),
-        minutes: Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60)),
-        seconds: Math.floor((diff % (1000 * 60)) / 1000),
+        hours: Math.floor((diff / (1000 * 60 * 60)) % 24),
+        minutes: Math.floor((diff / 1000 / 60) % 60),
+        seconds: Math.floor((diff / 1000) % 60),
       });
-    }, 1000);
-
-    return () => clearInterval(timer);
+    };
+    tick();
+    const id = setInterval(tick, 1000);
+    return () => clearInterval(id);
   }, [targetTime]);
 
-  const totalMinutes = timeLeft.hours * 60 + timeLeft.minutes;
-  const isGlowing = totalMinutes < 10;
+  if (!timeLeft) return null;
+
+  const pad = (n: number) => englishToBangla(n.toString().padStart(2, "0"));
 
   return (
-    <div className={`premium-card p-6 flex flex-col items-center justify-center transition-all duration-500 ${isGlowing ? 'animate-glow ring-2 ring-primary-gold' : ''}`}>
-      {label && <p className="text-xs font-black text-emerald-900/40 uppercase tracking-widest mb-4 font-bengali">{label}</p>}
-      <div className="flex justify-center items-center gap-2 sm:gap-4">
-        <TimeUnit value={timeLeft.hours} label="ঘণ্টা" />
-        <span className="text-2xl font-black text-primary-gold mb-6">:</span>
-        <TimeUnit value={timeLeft.minutes} label="মিনিট" />
-        <span className="text-2xl font-black text-primary-gold mb-6">:</span>
-        <TimeUnit value={timeLeft.seconds} label="সেকেন্ড" />
+    <div className="flex flex-col items-center gap-5 w-full">
+      {label && (
+        <p className="text-sm font-semibold font-bengali" style={{ color: 'var(--text-secondary)' }}>
+          {label}
+        </p>
+      )}
+      <div className="timer-grid">
+        <div className="timer-block">
+          <span className="timer-num glow-text">{pad(timeLeft.hours)}</span>
+          <span className="timer-lbl">ঘণ্টা</span>
+        </div>
+        <span className="timer-colon">:</span>
+        <div className="timer-block">
+          <span className="timer-num glow-text">{pad(timeLeft.minutes)}</span>
+          <span className="timer-lbl">মিনিট</span>
+        </div>
+        <span className="timer-colon">:</span>
+        <div className="timer-block">
+          <span className="timer-num glow-text">{pad(timeLeft.seconds)}</span>
+          <span className="timer-lbl">সেকেন্ড</span>
+        </div>
       </div>
-    </div>
-  );
-}
-
-function TimeUnit({ value, label }: { value: number; label: string }) {
-  const formatted = value.toString().padStart(2, '0');
-  return (
-    <div className="flex flex-col items-center gap-1.5 min-w-[60px]">
-      <div className="bg-gold-gradient w-full py-3 rounded-2xl border border-primary-gold/20 flex items-center justify-center shadow-inner">
-        <span className="text-2xl sm:text-3xl font-black text-emerald-900 tabular-nums">
-          {englishToBangla(formatted)}
-        </span>
-      </div>
-      <span className="text-[10px] font-black text-emerald-900/40 uppercase tracking-tighter font-bengali">{label}</span>
     </div>
   );
 }

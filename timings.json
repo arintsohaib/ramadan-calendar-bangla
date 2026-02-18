@@ -1,0 +1,302 @@
+[
+    {
+        "id": 1,
+        "ramadan": "০১ রমজান",
+        "gregorian": "১৯ ফেব্রুয়ারি",
+        "day": "বৃহস্পতিবার",
+        "sehri": "০৫:১৫",
+        "iftar": "০৬:০৪",
+        "phase": "রহমত",
+        "dayNumber": 1
+    },
+    {
+        "id": 2,
+        "ramadan": "০২ রমজান",
+        "gregorian": "২০ ফেব্রুয়ারি",
+        "day": "শুক্রবার",
+        "sehri": "০৫:১৪",
+        "iftar": "০৬:০৫",
+        "phase": "রহমত",
+        "dayNumber": 2
+    },
+    {
+        "id": 3,
+        "ramadan": "০৩ রমজান",
+        "gregorian": "২১ ফেব্রুয়ারি",
+        "day": "শনিবার",
+        "sehri": "০৫:১৩",
+        "iftar": "০৬:০৫",
+        "phase": "রহমত",
+        "dayNumber": 3
+    },
+    {
+        "id": 4,
+        "ramadan": "০৪ রমজান",
+        "gregorian": "২২ ফেব্রুয়ারি",
+        "day": "রবিবার",
+        "sehri": "০৫:১৩",
+        "iftar": "০৬:০৬",
+        "phase": "রহমত",
+        "dayNumber": 4
+    },
+    {
+        "id": 5,
+        "ramadan": "০৫ রমজান",
+        "gregorian": "২৩ ফেব্রুয়ারি",
+        "day": "সোমবার",
+        "sehri": "০৫:১২",
+        "iftar": "০৬:০৭",
+        "phase": "রহমত",
+        "dayNumber": 5
+    },
+    {
+        "id": 6,
+        "ramadan": "০৬ রমজান",
+        "gregorian": "২৪ ফেব্রুয়ারি",
+        "day": "মঙ্গলবার",
+        "sehri": "০৫:১১",
+        "iftar": "০৬:০৭",
+        "phase": "রহমত",
+        "dayNumber": 6
+    },
+    {
+        "id": 7,
+        "ramadan": "০৭ রমজান",
+        "gregorian": "২৫ ফেব্রুয়ারি",
+        "day": "বুধবার",
+        "sehri": "০৫:১০",
+        "iftar": "০৬:০৮",
+        "phase": "রহমত",
+        "dayNumber": 7
+    },
+    {
+        "id": 8,
+        "ramadan": "০৮ রমজান",
+        "gregorian": "২৬ ফেব্রুয়ারি",
+        "day": "বৃহস্পতিবার",
+        "sehri": "০৫:১০",
+        "iftar": "০৬:০৮",
+        "phase": "রহমত",
+        "dayNumber": 8
+    },
+    {
+        "id": 9,
+        "ramadan": "০৯ রমজান",
+        "gregorian": "২৭ ফেব্রুয়ারি",
+        "day": "শুক্রবার",
+        "sehri": "০৫:০৯",
+        "iftar": "০৬:০৯",
+        "phase": "রহমত",
+        "dayNumber": 9
+    },
+    {
+        "id": 10,
+        "ramadan": "১০ রমজান",
+        "gregorian": "২৮ ফেব্রুয়ারি",
+        "day": "শনিবার",
+        "sehri": "০৫:০৯",
+        "iftar": "০৬:০৯",
+        "phase": "রহমত",
+        "dayNumber": 10
+    },
+    {
+        "id": 11,
+        "ramadan": "১১ রমজান",
+        "gregorian": "০১ মার্চ",
+        "day": "রবিবার",
+        "sehri": "০৫:০৭",
+        "iftar": "০৬:১০",
+        "phase": "মাগফিরাত",
+        "dayNumber": 11
+    },
+    {
+        "id": 12,
+        "ramadan": "১২ রমজান",
+        "gregorian": "০২ মার্চ",
+        "day": "সোমবার",
+        "sehri": "০৫:০৬",
+        "iftar": "০৬:১০",
+        "phase": "মাগফিরাত",
+        "dayNumber": 12
+    },
+    {
+        "id": 13,
+        "ramadan": "১৩ রমজান",
+        "gregorian": "০৩ মার্চ",
+        "day": "মঙ্গলবার",
+        "sehri": "০৫:০৫",
+        "iftar": "০৬:১১",
+        "phase": "মাগফিরাত",
+        "dayNumber": 13
+    },
+    {
+        "id": 14,
+        "ramadan": "১৪ রমজান",
+        "gregorian": "০৪ মার্চ",
+        "day": "বুধবার",
+        "sehri": "০৫:০৪",
+        "iftar": "০৬:১১",
+        "phase": "মাগফিরাত",
+        "dayNumber": 14
+    },
+    {
+        "id": 15,
+        "ramadan": "১৫ রমজান",
+        "gregorian": "০৫ মার্চ",
+        "day": "বৃহস্পতিবার",
+        "sehri": "০৫:০৩",
+        "iftar": "০৬:১২",
+        "phase": "মাগফিরাত",
+        "dayNumber": 15
+    },
+    {
+        "id": 16,
+        "ramadan": "১৬ রমজান",
+        "gregorian": "০৬ মার্চ",
+        "day": "শুক্রবার",
+        "sehri": "০৫:০২",
+        "iftar": "০৬:১২",
+        "phase": "মাগফিরাত",
+        "dayNumber": 16
+    },
+    {
+        "id": 17,
+        "ramadan": "১৭ রমজান",
+        "gregorian": "০৭ মার্চ",
+        "day": "শনিবার",
+        "sehri": "০৫:০১",
+        "iftar": "০৬:১৩",
+        "phase": "মাগফিরাত",
+        "dayNumber": 17
+    },
+    {
+        "id": 18,
+        "ramadan": "১৮ রমজান",
+        "gregorian": "০৮ মার্চ",
+        "day": "রবিবার",
+        "sehri": "০৫:০০",
+        "iftar": "০৬:১৩",
+        "phase": "মাগফিরাত",
+        "dayNumber": 18
+    },
+    {
+        "id": 19,
+        "ramadan": "১৯ রমজান",
+        "gregorian": "০৯ মার্চ",
+        "day": "সোমবার",
+        "sehri": "০৪:৫৯",
+        "iftar": "০৬:১৪",
+        "phase": "মাগফিরাত",
+        "dayNumber": 19
+    },
+    {
+        "id": 20,
+        "ramadan": "২০ রমজান",
+        "gregorian": "১০ মার্চ",
+        "day": "মঙ্গলবার",
+        "sehri": "০৪:৫৮",
+        "iftar": "০৬:১৪",
+        "phase": "মাগফিরাত",
+        "dayNumber": 20
+    },
+    {
+        "id": 21,
+        "ramadan": "২১ রমজান",
+        "gregorian": "১১ মার্চ",
+        "day": "বুধবার",
+        "sehri": "০৪:৫৭",
+        "iftar": "০৬:১৫",
+        "phase": "নাজাত",
+        "dayNumber": 21
+    },
+    {
+        "id": 22,
+        "ramadan": "২২ রমজান",
+        "gregorian": "১২ মার্চ",
+        "day": "বৃহস্পতিবার",
+        "sehri": "০৪:৫৬",
+        "iftar": "০৬:১৫",
+        "phase": "নাজাত",
+        "dayNumber": 22
+    },
+    {
+        "id": 23,
+        "ramadan": "২৩ রমজান",
+        "gregorian": "১৩ মার্চ",
+        "day": "শুক্রবার",
+        "sehri": "০৪:৫৫",
+        "iftar": "০৬:১৬",
+        "phase": "নাজাত",
+        "dayNumber": 23
+    },
+    {
+        "id": 24,
+        "ramadan": "২৪ রমজান",
+        "gregorian": "১৪ মার্চ",
+        "day": "শনিবার",
+        "sehri": "০৪:৫৪",
+        "iftar": "০৬:১৬",
+        "phase": "নাজাত",
+        "dayNumber": 24
+    },
+    {
+        "id": 25,
+        "ramadan": "২৫ রমজান",
+        "gregorian": "১৫ মার্চ",
+        "day": "রবিবার",
+        "sehri": "০৪:৫৩",
+        "iftar": "০৬:১৬",
+        "phase": "নাজাত",
+        "dayNumber": 25
+    },
+    {
+        "id": 26,
+        "ramadan": "২৬ রমজান",
+        "gregorian": "১৬ মার্চ",
+        "day": "সোমবার",
+        "sehri": "০৪:৫২",
+        "iftar": "০৬:১৭",
+        "phase": "নাজাত",
+        "dayNumber": 26
+    },
+    {
+        "id": 27,
+        "ramadan": "২৭ রমজান",
+        "gregorian": "১৭ মার্চ",
+        "day": "মঙ্গলবার",
+        "sehri": "০৪:৫১",
+        "iftar": "০৬:১৭",
+        "phase": "নাজাত",
+        "dayNumber": 27
+    },
+    {
+        "id": 28,
+        "ramadan": "২৮ রমজান",
+        "gregorian": "১৮ মার্চ",
+        "day": "বুধবার",
+        "sehri": "০৪:৫০",
+        "iftar": "০৬:১৮",
+        "phase": "নাজাত",
+        "dayNumber": 28
+    },
+    {
+        "id": 29,
+        "ramadan": "২৯ রমজান",
+        "gregorian": "১৯ মার্চ",
+        "day": "বৃহস্পতিবার",
+        "sehri": "০৪:৪৯",
+        "iftar": "০৬:১৮",
+        "phase": "নাজাত",
+        "dayNumber": 29
+    },
+    {
+        "id": 30,
+        "ramadan": "৩০ রমজান",
+        "gregorian": "২০ মার্চ",
+        "day": "শুক্রবার",
+        "sehri": "০৪:৪৮",
+        "iftar": "০৬:১৯",
+        "phase": "নাজাত",
+        "dayNumber": 30
+    }
+]
